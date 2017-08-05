@@ -3,7 +3,7 @@
      -moz-transition: $name $duration $timing;
       -ms-transition: $name $duration $timing;
        -o-transition: $name $duration $timing;
-          transition: $name $duration $timing;
+          transition: $name $duration $timing; 
 }
 
 //animation prefixer
