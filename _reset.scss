@@ -1,0 +1,16 @@
+$full-size: 100%;
+
+html,
+body,
+ul,
+ol,
+div {
+  margin:  0;
+  padding: 0;
+}
+
+html,
+body, {
+  width: $full-size;
+  height: $full-size;
+}

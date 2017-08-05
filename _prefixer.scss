@@ -1,0 +1,38 @@
+@mixin transition($name, $duration, $timing) { //transition prefixer
+  -webkit-transition: $name $duration $timing;
+     -moz-transition: $name $duration $timing;
+      -ms-transition: $name $duration $timing;
+       -o-transition: $name $duration $timing;
+          transition: $name $duration $timing;
+}
+
+//animation prefixer
+@mixin animation ($name, $timing, $iteration) {
+  -webkit-animation: $name $timing $iteration;
+     -moz-animation: $name $timing $iteration;
+       -o-animation: $name $timing $iteration;
+          animation: $name $timing $iteration;
+}
+
+
+//box-shadow prefixer
+@mixin box-shadow ($offsetX, $offsetY, $blurRadius, $spreadRadius, $color) {
+  -webkit-box-shadow: $offsetX $offsetY $blurRadius $spreadRadius $color;
+     -moz-box-shadow: $offsetX $offsetY $blurRadius $spreadRadius $color;
+          box-shadow: $offsetX $offsetY $blurRadius $spreadRadius $color;
+}
+
+//box-sizing prefixer
+//since i never use anything but border box, i didn't feel the need to make a mixin
+.box-sizing {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+//linear gradient prefixera
+@mixin linear-gradient ($direction, $firstColor, $lastColor) {
+  background: $firstColor; //fallback color
+  background: -webkit-linear-gradient($direction, $firstColor, $lastColor);
+  background: linear-gradient($direction, $firstColor, $lastColor);
+}
