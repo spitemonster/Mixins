@@ -30,9 +30,13 @@
           box-sizing: border-box;
 }
 
-//linear gradient prefixera
+//linear gradient prefixer
 @mixin linear-gradient ($direction, $firstColor, $lastColor) {
   background: $firstColor; //fallback color
   background: -webkit-linear-gradient($direction, $firstColor, $lastColor);
   background: linear-gradient($direction, $firstColor, $lastColor);
+}
+
+@mixin fluidtype ($min, $max) {
+  font-size: calc($min + ($max - $min) * (100vw - 400px) / (2560px - 400px));
 }
