@@ -32,13 +32,3 @@ h4 {
 p {
   font-size: $p;
 }
-
-/*
-  okay, i've got some 'splaining to do. should be pretty straightforward but in case it's not:
-
-  we start with min and max font-size declaration. generally i like 16px for full size text and 14px as small as it gets, for mobile, etc. base font-size is then calculated. essentially, this just calculates your font size based on the browser width, your specified min and max font size and your specified min and max browser width. another way to think about it is the max browser width you set is where the font reaches your max-font size. unforutnately i have not quite figured out how to totally limit font size at either end, but scaling really helps reduce the likelihood that your font will be illegible and tiny on small screens.
-
-  font-sizes from there are scaled from the base font size. i never use headlines smaller than h4, so my scale is based on p, h4, h3, h2 and h1. p is the result of the base-font-size calculation, each successive font is the prior font multiplied by the scale chosen. as a result of this, h1s get fucking massive, depending on the number of headlines you use and the scale you choose. keep this in mind if you use this.
-
-  on the front-end, this compiles into something really ugly. i like to aim for pretty, maintainable code, but in this instance i opted for the usefulness of this partial. and since it was written with scss anyway, anyone who may attempt to edit or maintain it SHOULD be working in scss and have this cleaner partial to work with. if not, tough titty.
-*/
