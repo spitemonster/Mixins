@@ -10,5 +10,5 @@
   $min-val: strip-unit($min);
   $max-val: strip-unit($max);
 
-  font-size: calc( #{$min} + (#{$max-val} - #{$min-val}) * (100vw - 400px) / (2560 - 400) );
+  font-size: calc(#{$min} + (#{$max-val} - #{$min-val}) * (100vw - 400px) / (2560 - 400));
 }

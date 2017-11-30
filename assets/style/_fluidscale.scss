@@ -1,0 +1,48 @@
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+$min: 13px;
+$max: 16px;
+$scale: 1.3;
+$min-val: strip-unit($min);
+$max-val: strip-unit($max);
+$min-browser-width: 400px;
+$max-browser-width: 2560px;
+
+$base-font-size: calc(#{$min} + (#{$max-val} - #{$min-val}) * (100vw - 400px) / (2560 - 400));
+
+$p: $base-font-size;
+$h4: calc(#{$p} * #{$scale});
+$h3: calc(#{$h4} * #{$scale});
+$h2: calc(#{$h3} * #{$scale});
+$h1: calc(#{$h2} * #{$scale});
+
+p {
+  font-size: $p;
+  line-height: calc(#{$p} * 1.5);
+}
+
+h4 {
+  font-size: $h4;
+  line-height: calc(#{$h4} * 1.5);
+}
+
+h3 {
+  font-size: $h3;
+  line-height: calc(#{$h3} * 1.5);
+}
+
+h2 {
+  font-size: $h2;
+  line-height: calc(#{$h2} * 1.5);
+}
+
+h1 {
+  font-size: $h1;
+  line-height: calc(#{$h1} * 1.5);
+}

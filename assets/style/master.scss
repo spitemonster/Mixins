@@ -1,0 +1,14 @@
+@import 'reset';
+@import 'fluidscale';
+
+section {
+  @media (min-width: 500px) {
+    margin: 0 auto;
+    max-width: 60ch;
+  }
+
+  @media (max-width: 499px) {
+    padding: 1em;
+    width: 100%;
+  }
+}
