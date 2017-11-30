@@ -1,5 +1,6 @@
 @import 'reset';
 @import 'fluidscale';
+@import 'fluidtype';
 
 section {
   @media (min-width: 500px) {
@@ -11,4 +12,8 @@ section {
     padding: 1em;
     width: 100%;
   }
+}
+
+p {
+  margin: 1em 0;
 }

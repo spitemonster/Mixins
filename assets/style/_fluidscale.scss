@@ -22,6 +22,10 @@ $h3: calc(#{$h4} * #{$scale});
 $h2: calc(#{$h3} * #{$scale});
 $h1: calc(#{$h2} * #{$scale});
 
+:root {
+  font-size: $p;
+}
+
 p {
   font-size: $p;
   line-height: calc(#{$p} * 1.5);

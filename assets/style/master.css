@@ -8,7 +8,9 @@ section,
 h1,
 h2,
 h3,
-h4 {
+h4,
+p,
+blockquote {
   margin: 0;
   padding: 0;
 }
@@ -24,6 +26,10 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+:root {
+  font-size: calc(13px + (16 - 13) * (100vw - 400px) / (2560 - 400));
 }
 
 p {
@@ -63,4 +69,20 @@ h1 {
     padding: 1em;
     width: 100%;
   }
+}
+
+p {
+  margin: 1em 0;
+}
+
+blockquote {
+  font-size: calc(12px + (18 - 12) * (100vw - 400px) / (2560 - 400));
+  float: left;
+  position: relative;
+  margin-left: -5em;
+  width: 30ch;
+  text-align: justify;
+  text-justify: inter-word;
+  padding: .5em 1em;
+  font-weight: bold;
 }

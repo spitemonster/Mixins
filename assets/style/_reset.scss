@@ -10,7 +10,9 @@ section,
 h1,
 h2,
 h3,
-h4 {
+h4,
+p,
+blockquote {
   margin: 0;
   padding: 0;
 }
@@ -19,6 +21,7 @@ html,
 body, {
   box-sizing: border-box;
   height: $full-size;
+  text-rendering: geometricPrecision;
   width: $full-size;
 }
 
